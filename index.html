@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도타2 길드 분석 대시보드</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js for visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>⚔️ 도타2 시리길드 능력 분석</h1>
+            <p>길드원들의 전투력과 팀워크를 한눈에!</p>
+        </header>
+        
+        <div class="dashboard">
+            <div class="stats-summary">
+                <div class="stat-card">
+                    <h3>평균 MMR</h3>
+                    <span class="stat-value" id="avg-mmr">0</span>
+                </div>
+                <div class="stat-card">
+                    <h3>길드 승률</h3>
+                    <span class="stat-value" id="guild-winrate">0%</span>
+                </div>
+                <div class="stat-card">
+                    <h3>활동률</h3>
+                    <span class="stat-value" id="activity-rate">0%</span>
+                </div>
+            </div>
+
+            <div class="members-grid" id="members-container">
+                <!-- 멤버 카드들이 여기에 생성됩니다 -->
+            </div>
+
+            <div class="charts-container">
+                <div class="chart-box">
+                    <canvas id="role-distribution"></canvas>
+                </div>
+                <div class="chart-box">
+                    <canvas id="mmr-distribution"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
